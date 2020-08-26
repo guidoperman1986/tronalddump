@@ -1,0 +1,26 @@
+<!-- {{tags | json}} -->
+
+<div class="row mt-3" *ngIf="tags">
+<!--     <div class="col-md-12">
+        <div class="card-columns">
+            
+            <div class="card" *ngFor="let tag of tags">
+                <div class="card-body">
+                    <h5 class="card-title">{{tag.value}}</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Created at: {{tag.created_at | date: 'dd/MM/yyyy' }}</small>
+                </div> 
+            </div>
+            
+        </div>
+
+    </div> -->
+
+    <div *ngFor="let tag of tags">
+        <div class="ml-2 texto-tag" (click)="buscarTag(tag._links.self)">{{tag.value}}</div>        
+    </div>
+
+
+</div>
